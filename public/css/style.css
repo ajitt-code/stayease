@@ -1,0 +1,224 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  color:#ebebeb;
+  min-height: 100vh;
+   background-color: rgba(2, 2, 23, 0.909) !important; 
+}
+.container {
+  flex: 2;
+}
+
+/* Navbar */
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.fa-compass i {
+  color: #fe424d;
+  font-size: 2rem;
+}
+.nav-link {
+  color: #222222 !important;
+}
+
+/* Footer */
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+.f-info-socials i {
+  margin-right: 0.8rem;
+  font-size: 1.5rem;
+}
+.f-info-links a:hover {
+  text-decoration: underline;
+  color: #222222;
+}
+
+.f-info {
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/* Cards */
+.card-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.5rem !important;
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.listing-card {
+  width: 100%;
+  border-radius: 1.5rem !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
+}
+
+.listing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 var(--glass-shadow);
+}
+
+.listing-card .show-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.listing-card .card-body {
+  padding: 1.5rem;
+}
+
+.listing-card .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.listing-card .location {
+  color: #7f8c8d;
+}
+
+.card-text p {
+  font-weight: 400 !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.card img {
+  object-fit: cover !important;
+  height: 20rem;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+}
+.card-body a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8) !important;
+  transition: color 0.3s ease;
+}
+.card-body a:hover {
+  color: rgba(0, 0, 0, 1) !important;
+}
+.card-img-overlay {
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.3)
+  );
+  border-radius: 1.5rem;
+}
+.card-img-overlay:hover {
+  opacity: 0.1;
+  background-color: black;
+}
+
+/* New page  */
+.add-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+
+/* Show Page  */
+.show-img{
+    height: 30vh;
+}
+
+.edit-btn{
+    text-decoration: none;
+    color: white;
+}
+
+.edit-btn:hover {
+  color: white;
+}
+
+.edit-btn a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.show-btns{
+    display: flex;
+    padding: 1rem;
+}
+
+.show-btns .btn {
+  min-width: 100px;
+}
+
+.del-btn {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-shadow: rgba(31, 38, 135, 0.37);
+}
+
+/* Base card styles */
+.card {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: 0 8px 32px 0 var(--glass-shadow) !important;
+  border-radius: 1.5rem !important;
+  transition: all 0.3s ease;
+  margin: 1rem;
+}
+
+/* Index page card */
+.index-card {
+  width: 24rem;
+}
+
+.index-card img {
+  height: 20rem;
+  object-fit: cover;
+}
+
+/* Show page card */
+.show-card {
+  width: 100%;
+}
+
+.show-card img {
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Common hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 var(--glass-shadow) !important;
+}
+
+/* Add this at the bottom of your CSS file */
+@supports not (backdrop-filter: blur(10px)) {
+  .card, .card-body {
+    background: rgba(255, 255, 255, 0.9) !important;
+  }
+}
